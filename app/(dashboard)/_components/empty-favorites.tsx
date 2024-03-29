@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const Emptyfav = () => {
     return(
-        <div>
+        <div className="flex flex-col justify-center items-center">
             <Image
             src="/empty-favorites.svg"
             height={140}

@@ -14,7 +14,7 @@ favorites?: string;
 const DashBoard = ({searchParams,}: DashboardProps) => {
     const {organization} = useOrganization();
     return (
-    <div className=" flex -1 h-[calc(100%-80px)] justify-center p-6">
+    <div className=" flex-1 h-[calc(100%-80px)] justify-center p-6">
      
         {!organization ? (<EmptyOrg/>) : (
        <BoardList 

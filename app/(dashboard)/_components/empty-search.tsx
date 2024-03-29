@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const EmptySearch = () => {
     return(
-        <div>
+        <div className="flex flex-col justify-center items-center">
             <Image
             src="/empty-search.svg"
             height={140}
