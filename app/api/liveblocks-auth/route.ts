@@ -30,16 +30,18 @@ const liveblocks = new Liveblocks({
  userOrgId:authorization.orgId
   }
  )
-  if (board?.orgId !== authorization.orgId){
-      return new Response("Unauthorized", {status: 403});
-  }
-
-  const userInfo = {
+        const userInfo = {
     name: user.firstName || undefined,
     picture: user.imageUrl
   };
+      const session = liveblocks.prepareSession(user.id,{userInfo});
+  if (board?.orgId !== authorization.orgId){
+     session.allow(room, session.READ_ACCESS);
+  }
+
+
   console.log({userInfo});
-  const session = liveblocks.prepareSession(user.id,{userInfo});
+  
   if (room){
     session.allow(room, session.FULL_ACCESS)
   }
