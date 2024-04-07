@@ -11,6 +11,12 @@ interface PathProps {
 };
 
 export const Path = ({ x, y, points, fill, onPointerDown, stroke }: PathProps) => {
+    if (!points || points.length === 0) {
+        // Handle the case where points are not provided or empty
+        // You might want to return null or a default SVG path here
+        return null;
+    }
+
     return (
         <path
         className="drop=shadow-md"
