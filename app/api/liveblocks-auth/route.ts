@@ -40,9 +40,9 @@ const liveblocks = new Liveblocks({
   };
   console.log({userInfo});
   const session = liveblocks.prepareSession(user.id,{userInfo});
-  
+  if(room){
 session.allow(room, session.FULL_ACCESS)
-  
+  }
 
   const {status, body} = await session.authorize();
   console.log({status, body}, "ALLOWED");
