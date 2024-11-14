@@ -30,25 +30,21 @@ const liveblocks = new Liveblocks({
  userOrgId:authorization.orgId
   }
  )
- const userInfo = {
-  name: user.firstName || undefined,
-  picture: user.imageUrl
-};
-
-const session = liveblocks.prepareSession(user.id,{userInfo});
-if (room){
+        const userInfo = {
+    name: user.firstName || undefined,
+    picture: user.imageUrl
+  };
+      const session = liveblocks.prepareSession(user.id,{userInfo});
   if (board?.orgId !== authorization.orgId){
-    session.allow(room, session.READ_ACCESS);
+     session.allow(room, session.READ_ACCESS);
   }
-  else{
-    session.allow(room, session.FULL_ACCESS);
+
+
+  console.log({userInfo});
+  
+  if (room){
+    session.allow(room, session.FULL_ACCESS)
   }
-}
-
- 
-  // console.log({userInfo});
- 
-
 
   const {status, body} = await session.authorize();
   console.log({status, body}, "ALLOWED");
