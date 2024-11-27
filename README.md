@@ -129,12 +129,12 @@ This project is licensed under the [MIT License](LICENSE). Feel free to use, mod
 
 If you have any questions, suggestions, or feedback, please feel free to reach out to us:
 
-- **Email**: your-email@example.com
+- **Email**: your-rajkharkwal34@gmail.com
 - **GitHub Issues**: [https://github.com/yourusername/project-name/issues](https://github.com/yourusername/project-name/issues)
 
 Thank you for your interest in **Project Name**! We hope you find it useful and look forward to your contributions.
 
 ---
 
-*This README was generated with ❤️ by [Your Name](https://github.com/yourusername).*
+*This README was generated with ❤️ by [Raj Kharkwal]([https://github.com/yourusername](https://github.com/Raaaaj360]).*
 ## THis is how you make a pull request and contribute to ann open source project
